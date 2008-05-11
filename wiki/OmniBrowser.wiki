@@ -1,0 +1,9 @@
+#summary OmniBrowser description
+
+OmniBrowser is a set of Smalltalk platform and GUI independent development  tools
+
+Homepage: http://wiresong.ca/OmniBrowser
+
+= Documentation =
+
+* http://www.iam.unibe.ch/~scg/Archive/Papers/Berg07cOmnibrowser.pdf
