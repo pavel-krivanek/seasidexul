@@ -1,0 +1,5 @@
+#summary where to find souce codes of the SeasideXUL project
+
+Source codes of the SeasideXUL project are *not* available via SVN Google repository.
+
+Please visit [http://www.squeaksource.com/SeasideXUL.html SeasideXul SqueakSource] Monticello repository
