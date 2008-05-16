@@ -12,7 +12,7 @@ SeasideXUL supports OmniBrowser based tools so whole Smalltalk IDE is available.
 
 Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files with an overlay. Download it here:
 
-*http://seasidexul.googlecode.com/files/launcher.zip*
+http://seasidexul.googlecode.com/files/launcher.zip
 
 To run it use
 {{{
