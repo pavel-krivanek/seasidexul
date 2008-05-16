@@ -8,6 +8,29 @@ It is an additional layer on top of Seaside web framework.
 
 SeasideXUL supports OmniBrowser based tools so whole Smalltalk IDE is available. 
 
+= How to run XULLauncher =
+
+Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files with an overlay. Download it here:
+
+*http://seasidexul.googlecode.com/files/launcher.zip*
+
+To run it use
+{{{
+xulrunner application.ini
+}}}
+or with Firefox 3 beta
+{{{
+firefox -app application.ini
+}}}
+
+If you want to run it with the JavaScript console, add the parameter -jsconsole
+{{{
+xulrunner application.ini -jsconsole
+}}}
+
+You need to use the full path to application.ini on MacOS. XULRunner >= 1.8 should be ok.
+
+
 
 = Screenshots =
 
