@@ -15,7 +15,7 @@ See [Screenshots here]
 = Requirements =
 
 - [http://www.pharo-project.org Pharo] or Squeak with Seaside installed*
-  * http://gforge.inria.fr/frs/download.php/24830/pharo1.0-10496-rc1web09.11.4.zip
+  * virtual machine, image (http://gforge.inria.fr/frs/download.php/24830/pharo1.0-10496-rc1web09.11.4.zip)
 - [https://developer.mozilla.org/Talk:en/XULRunner Mozilla XULRunner]*
   * http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1/runtimes/
 - launcher application template* 
