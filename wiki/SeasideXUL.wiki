@@ -8,17 +8,39 @@ It is an additional layer on top of Seaside web framework.
 
 SeasideXUL supports OmniBrowser based tools so whole Smalltalk IDE is available. 
 
-= How to run XULLauncher =
+= Screenshots =
 
-Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files with an overlay. Download it here:
+See [Screenshots here]
 
-http://seasidexul.googlecode.com/files/launcher.zip
+= Requirements =
+
+* [http://www.pharo-project.org Pharo] or Squeak with Seaside installed
+[http://gforge.inria.fr/frs/download.php/24830/pharo1.0-10496-rc1web09.11.4.zip]
+* [https://developer.mozilla.org/Talk:en/XULRunner Mozilla XULRunner]
+[http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1/runtimes/]
+* launcher application template (see [Downloads])
+
+= Installaction =
+
+{{{
+Installer ss project: 'SeasideXUL';
+	install: 'SeasideXUL';
+	install: 'OB-SeasideXUL'.
+OBPlatform current: (Smalltalk at: #OBSeasideXULPlatform) new.SystemBrowser default: (Smalltalk classNamed: #O2SystemBrowserAdaptor). 
+WAKomEncoded startOn: 8888.
+}}}
+
+= Launcher application =
+
+Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files. Download it here:
+
+http://seasidexul.googlecode.com/files/oblauncher.zip
 
 To run it use
 {{{
 xulrunner application.ini
 }}}
-or with Firefox 3 beta
+or with Firefox 3
 {{{
 firefox -app application.ini
 }}}
@@ -28,10 +50,5 @@ If you want to run it with the JavaScript console, add the parameter -jsconsole
 xulrunner application.ini -jsconsole
 }}}
 
-You need to use the full path to application.ini on MacOS. XULRunner >= 1.8 should be ok.
+You need to use the full path to application.ini on MacOS
 
-
-
-= Screenshots =
-
-See [Screenshots here]
