@@ -25,10 +25,12 @@ See [Screenshots here]
 
 {{{
 Gofer new
-    squeaksource: 'SeasideXUL';
-    addPackage: 'SeasideXUL';
-    addPackage: 'OB-SeasideXUL';
-    load.
+	squeaksource: 'SeasideXUL';
+	addPackage: 'SeasideXUL';
+	addPackage: 'OB-SeasideXUL';
+	renggli:  'omnibrowser';
+	addPackage: 'OB-Tools';
+	load.
 WAKomEncoded startOn: 8888.
 }}}
 
