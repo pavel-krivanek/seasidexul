@@ -24,9 +24,11 @@ See [Screenshots here]
 = Installation =
 
 {{{
-Installer ss project: 'SeasideXUL';
-	install: 'SeasideXUL';
-	install: 'OB-SeasideXUL'.
+Gofer new
+    squeaksource: 'SeasideXUL';
+    addPackage: 'SeasideXUL';
+    addPackage: 'OB-SeasideXUL';
+    load.
 WAKomEncoded startOn: 8888.
 }}}
 
