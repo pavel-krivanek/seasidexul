@@ -65,3 +65,5 @@ OBPlatform current: (Smalltalk at: #OBShoutPlatform) new.
 SystemBrowser default: (Smalltalk classNamed: #OBSystemBrowserAdaptor ). 
 UIManager default: MorphicUIManager new.	     
 }}}
+
+[http://code.google.com/p/seasidexul/w/edit/SeasideXUL edit] this page
