@@ -19,7 +19,7 @@ See [Screenshots here]
 - [https://developer.mozilla.org/Talk:en/XULRunner Mozilla XULRunner]
   * http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1/runtimes/
 - launcher application template
-  * http://seasidexul.googlecode.com/files/oblauncher.zip
+  {{{ SeasideXULLauncherGenerator new generate }}}
 
 = Installation =
 
@@ -34,9 +34,9 @@ WAKomEncoded startOn: 8888.
 
 = Launcher application =
 
-Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files. Download it here:
+Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files. You must to generate it using this command: 
 
-http://seasidexul.googlecode.com/files/oblauncher.zip
+{{{ SeasideXULLauncherGenerator new generate }}}
 
 To run it use
 {{{
