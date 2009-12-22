@@ -27,8 +27,6 @@ See [Screenshots here]
 Installer ss project: 'SeasideXUL';
 	install: 'SeasideXUL';
 	install: 'OB-SeasideXUL'.
-OBPlatform current: (Smalltalk at: #OBSeasideXULPlatform) new.
-SystemBrowser default: (Smalltalk classNamed: #O2SystemBrowserAdaptor). 
 WAKomEncoded startOn: 8888.
 }}}
 
@@ -53,3 +51,17 @@ xulrunner application.ini -jsconsole
 }}}
 
 You need to use the full path to application.ini on MacOS
+
+= SeasideXUL development environment =
+
+This code switches to SeasideXUL OmniBrowser platform and UIManager. It will return to the  normal settings after a mouse button click on display.
+
+{{{
+OBPlatform current: (Smalltalk at: #OBSeasideXULPlatform) new.
+SystemBrowser default: (Smalltalk classNamed: #OBSystemBrowserAdaptor ).
+UIManager default: SeasideXULUIManager new. 
+Sensor waitButton.
+OBPlatform current: (Smalltalk at: #OBShoutPlatform) new.
+SystemBrowser default: (Smalltalk classNamed: #OBSystemBrowserAdaptor ). 
+UIManager default: MorphicUIManager new.	     
+}}}
