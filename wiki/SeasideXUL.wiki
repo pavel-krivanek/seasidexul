@@ -69,6 +69,7 @@ OBPlatform current: (Smalltalk at: #OBShoutPlatform) new.
 SystemBrowser default: (Smalltalk classNamed: #OBSystemBrowserAdaptor ). 
 UIManager default: MorphicUIManager new.    
 Process allInstances select: [:p | p name = 'seaside connection'] thenDo: [:p | p terminate].
+XULDebugErrorHandler reset.
 }}}
 
 [http://code.google.com/p/seasidexul/w/edit/SeasideXUL edit] this page
