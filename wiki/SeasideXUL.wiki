@@ -25,12 +25,12 @@ See [Screenshots here]
 
 {{{
 Gofer new
-	renggli:  'omnibrowser';
-	addPackage: 'OB-Tools';
-	squeaksource: 'SeasideXUL';
-	addPackage: 'SeasideXUL';
-	addPackage: 'OB-SeasideXUL';
-	load.
+        renggli:  'omnibrowser';
+        package: 'OB-Tools';
+        squeaksource: 'SeasideXUL';
+        package: 'SeasideXUL';
+        package: 'OB-SeasideXUL';
+        load.
 WAKomEncoded startOn: 8888.
 }}}
 
