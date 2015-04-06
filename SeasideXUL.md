@@ -1,0 +1,73 @@
+# Introduction #
+
+SeasideXUL is a web framework that enables to create thin-client desktop applications with standard look&feel based on remote XUL in Smalltalk.
+
+It is an additional layer on top of Seaside web framework.
+
+SeasideXUL supports OmniBrowser based tools so whole Smalltalk IDE is available.
+
+# Screenshots #
+
+See [here](Screenshots.md)
+
+# Requirements #
+
+- [Pharo](http://www.pharo-project.org) or Squeak with Seaside installed
+  * virtual machine, image (http://gforge.inria.fr/frs/download.php/25122/pharo1.0-10502-rc1web09.12.2.zip)
+- [Mozilla XULRunner](https://developer.mozilla.org/Talk:en/XULRunner)
+  * http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.9.1/runtimes/
+- launcher application template
+> ` SeasideXULLauncherGenerator new generate `
+
+# Installation #
+
+```
+Gofer new
+        renggli:  'omnibrowser';
+        package: 'OB-Tools';
+        squeaksource: 'SeasideXUL';
+        package: 'SeasideXUL';
+        package: 'OB-SeasideXUL';
+        load.
+WAKomEncoded startOn: 8888.
+```
+
+# Launcher application #
+
+Remote XUL has many security restrictions so for applications like XULLauncher you need special local chrome files. You must to generate it using this command:
+
+` SeasideXULLauncherGenerator new generate `
+
+To run it use
+```
+xulrunner application.ini
+```
+or with Firefox 3
+```
+firefox -app application.ini
+```
+
+If you want to run it with the JavaScript console, add the parameter -jsconsole
+```
+xulrunner application.ini -jsconsole
+```
+
+You need to use the full path to application.ini on MacOS
+
+# SeasideXUL development environment #
+
+This code switches to SeasideXUL OmniBrowser platform and UIManager. It will return to the  normal settings after a mouse button click on display.
+
+```
+OBPlatform current: (Smalltalk at: #OBSeasideXULPlatform) new.
+SystemBrowser default: (Smalltalk classNamed: #OBSystemBrowserAdaptor ).
+UIManager default: SeasideXULUIManager new. 
+Sensor waitButton.
+OBPlatform current: (Smalltalk at: #OBShoutPlatform) new.
+SystemBrowser default: (Smalltalk classNamed: #OBSystemBrowserAdaptor ). 
+UIManager default: MorphicUIManager new.    
+Process allInstances select: [:p | p name = 'seaside connection'] thenDo: [:p | p terminate].
+XULDebugErrorHandler reset.
+```
+
+[edit](http://code.google.com/p/seasidexul/w/edit/SeasideXUL) this page
